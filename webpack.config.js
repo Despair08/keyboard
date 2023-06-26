@@ -6,7 +6,7 @@ const { merge } = require('webpack-merge');
 
 const baseConfig = {
     entry: {
-        index: './src/script/main.js',
+        index: './src/main.js',
     },
     output: {
         filename: '[name].js',
