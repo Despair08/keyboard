@@ -1,0 +1,10 @@
+@import "../../../abstract/_varaibles.scss";
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  color: #000;
+  text-align: center;
+  background-color: $bg-color;
+}

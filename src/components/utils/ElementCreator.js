@@ -10,7 +10,7 @@ export default class ElemenetCreator{
 
   addInnerElement(element){
     if(element instanceof ElemenetCreator){
-      this.element.append(element.getElement)
+      this.element.append(element.getElement());
     }else{
       this.element.append(element);
     }
