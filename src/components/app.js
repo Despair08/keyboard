@@ -1,5 +1,6 @@
 import './abstract/_normalize.scss';
 import './abstract/_varaibles.scss';
+import './_common.scss';
 
 import WrapperView from './view/wrapper/wrapper-view';
 

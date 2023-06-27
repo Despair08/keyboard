@@ -16,7 +16,7 @@ export default class WrapperView extends View{
   constructor(mainComponent){
     const params = {
       tag: 'div',
-      classNames: [CssClasses.wrapper],
+      classNames: [CssClasses.WRAPPER],
     }
     super(params);
     this.configureView(mainComponent);
@@ -25,19 +25,19 @@ export default class WrapperView extends View{
   configureView(){
     const headerParams = {
       tag: 'header',
-      classNames: [CssClasses.header],
-      textContent: 'It is a header',
+      classNames: [CssClasses.HEADER],
+      textContent: 'Virtual keyboard',
       callback: null,
     }
     const mainParams = {
       tag: 'div',
-      classNames: [CssClasses.header],
+      classNames: [CssClasses.MAIN],
       textContent: 'It is a main',
       callback: null,
     }
     const footerParams = {
       tag: 'footer',
-      classNames: [CssClasses.header],
+      classNames: [CssClasses.FOOTER],
       textContent: 'It is a footer',
       callback: null,
     }

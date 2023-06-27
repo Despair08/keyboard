@@ -18,6 +18,6 @@ createView(params){
     };
 
     this.viewElementCreator = new ElemenetCreator(elementParams);
-    retun this.viewElementCreator;
+    return this.viewElementCreator;
   }
 }
