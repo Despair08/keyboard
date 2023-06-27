@@ -4,6 +4,7 @@ import './main/_main.scss';
 import './footer/_footer.scss';
 import View from '../view.js';
 import ElemenetCreator from '../../utils/ElementCreator.js';
+import MainView from './main/main-view';
 
 const CssClasses = {
   WRAPPER : 'wrapper',
@@ -32,7 +33,7 @@ export default class WrapperView extends View{
     const mainParams = {
       tag: 'div',
       classNames: [CssClasses.MAIN],
-      textContent: 'It is a main',
+      textContent: '',
       callback: null,
     }
     const footerParams = {
@@ -45,8 +46,8 @@ export default class WrapperView extends View{
     const creatorHeader = new ElemenetCreator(headerParams);
     this.viewElementCreator.addInnerElement(creatorHeader);
 
-    const creatorMain = new ElemenetCreator(mainParams);
-    this.viewElementCreator.addInnerElement(creatorMain);
+    const creatorMain = new MainView();
+    this.viewElementCreator.addInnerElement(creatorMain.getHtmlElement());
 
     const creatorFooter = new ElemenetCreator(footerParams);
     this.viewElementCreator.addInnerElement(creatorFooter);
