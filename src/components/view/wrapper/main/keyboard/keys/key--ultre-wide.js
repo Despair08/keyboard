@@ -1,4 +1,4 @@
-import '_key.scss'
+import './_key.scss'
 import KeyView from "./key-view";
 import ElementCreator from '../../../../../utils/ElementCreator';
 

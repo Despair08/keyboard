@@ -1,5 +1,6 @@
 import View from "../../view";
 import ElementCreator from "../../../utils/ElementCreator";
+import keyboardView from "./keyboard/keyboard-view";
 
 const CssClasses = {
     MAIN: 'main',
@@ -30,8 +31,8 @@ export default class MainView extends View{
     };
     const creatorOutput = new ElementCreator(textAreaParams);
     this.viewElementCreator.addInnerElement(creatorOutput);
-    const creatorKeyboard = new ElementCreator(keyboardParams);
-    this.viewElementCreator.addInnerElement(creatorKeyboard);
+    const creatorKeyboard = new keyboardView(keyboardParams);
+    this.viewElementCreator.addInnerElement(creatorKeyboard.getHtmlElement());
   }
 
 }

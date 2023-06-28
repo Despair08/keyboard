@@ -1,4 +1,4 @@
-import '_keyboard.scss';
+import './_keyboard.scss';
 
 import View from "../../../view";
 import { keyCodes } from '../../../../keyCodes/keyCodes';
@@ -25,29 +25,29 @@ constructor(mainComponent){
     keyCodes.forEach((key, index) => {
         switch (key) {
       case 'Backspace':
+        const creatorBackspace = new KeyViewWide(index);
+        this.viewElementCreator.addInnerElement(creatorBackspace.getHtmlElement());
         break;
-          const creatorBackspace = new KeyViewWide(index);
-          this.viewElementCreator.addInnerElement(creatorBackspace.getHtmlElement());
       case 'Caps Lock':
+        const creatorCaps = new KeyViewWide(index);
+        this.viewElementCreator.addInnerElement(creatorCaps.getHtmlElement());
         break;
-          const creatorCaps = new KeyViewWide(index);
-          this.viewElementCreator.addInnerElement(creatorCaps.getHtmlElement());
       case ' ':
+        const creatorSpace = new KeyViewUltraWide(index);
+        this.viewElementCreator.addInnerElement(creatorSpace.getHtmlElement());
         break;
-          const creatorSpace = new KeyViewUltraWide(index);
-          this.viewElementCreator.addInnerElement(creatorSpace.getHtmlElement());
       case 'Shift':
+        const creatorShift = new KeyViewExtraWide(index);
+        this.viewElementCreator.addInnerElement(creatorShift.getHtmlElement());
         break;
-          const creatorShift = new KeyViewExtraWide(index);
-          this.viewElementCreator.addInnerElement(creatorShift.getHtmlElement());
       case 'Tab':
+        const creatorTab = new KeyViewWide(index);
+        this.viewElementCreator.addInnerElement(creatorTab.getHtmlElement());
         break;
-          const creatorTab = new KeyViewWide(index);
-          this.viewElementCreator.addInnerElement(creatorTab.getHtmlElement());
       case 'Enter':
+        const creatorEnter = new KeyViewWide(index);
+        this.viewElementCreator.addInnerElement(creatorEnter.getHtmlElement());
         break;
-          const creatorEnter = new KeyViewWide(index);
-          this.viewElementCreator.addInnerElement(creatorEnter.getHtmlElement());
       default:
           const creatorKey = new KeyView(index);
           this.viewElementCreator.addInnerElement(creatorKey.getHtmlElement());

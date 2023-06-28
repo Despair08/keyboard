@@ -9,11 +9,11 @@ const CssClasses = {
 
 export default class KeyView extends View{
   constructor(mainComponent){
-    super(params);
     const params = {
       tag: 'div',
       classNames: [CssClasses.KEY],
     }
+    super(params);
     this.configureView(mainComponent);
   }
 
