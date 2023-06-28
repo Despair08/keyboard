@@ -1,5 +1,5 @@
 import View from "../../view";
-import ElemenetCreator from "../../../utils/ElementCreator";
+import ElementCreator from "../../../utils/ElementCreator";
 
 const CssClasses = {
     MAIN: 'main',
@@ -28,9 +28,9 @@ export default class MainView extends View{
       classNames: [CssClasses.INPUT],
       callback: null,
     };
-    const creatorOutput = new ElemenetCreator(textAreaParams);
+    const creatorOutput = new ElementCreator(textAreaParams);
     this.viewElementCreator.addInnerElement(creatorOutput);
-    const creatorKeyboard = new ElemenetCreator(keyboardParams);
+    const creatorKeyboard = new ElementCreator(keyboardParams);
     this.viewElementCreator.addInnerElement(creatorKeyboard);
   }
 

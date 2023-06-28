@@ -20,13 +20,3 @@
   box-shadow: 0 0 5px $dark;
   font-size: 18px;
 }
-
-.main__keyboard {
-  border: 1px solid $bg-color;
-  border-radius: 15px;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(15, 3rem);
-  grid-template-rows: repeat(5, 3rem);
-  gap: 5px;
-}

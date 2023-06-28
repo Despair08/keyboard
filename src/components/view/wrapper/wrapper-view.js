@@ -3,7 +3,7 @@ import './header/_header.scss';
 import './main/_main.scss';
 import './footer/_footer.scss';
 import View from '../view.js';
-import ElemenetCreator from '../../utils/ElementCreator.js';
+import ElementCreator from '../../utils/ElementCreator.js';
 import MainView from './main/main-view';
 
 const CssClasses = {
@@ -43,13 +43,13 @@ export default class WrapperView extends View{
       callback: null,
     }
 
-    const creatorHeader = new ElemenetCreator(headerParams);
+    const creatorHeader = new ElementCreator(headerParams);
     this.viewElementCreator.addInnerElement(creatorHeader);
 
     const creatorMain = new MainView();
     this.viewElementCreator.addInnerElement(creatorMain.getHtmlElement());
 
-    const creatorFooter = new ElemenetCreator(footerParams);
+    const creatorFooter = new ElementCreator(footerParams);
     this.viewElementCreator.addInnerElement(creatorFooter);
   }
 }

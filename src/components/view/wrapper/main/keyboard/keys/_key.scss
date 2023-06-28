@@ -1,4 +1,4 @@
-@import "../abstract/_varaibles";
+@import "../../../../../abstract/_varaibles";
 
 .key {
   width: 3rem;
@@ -13,5 +13,17 @@
   &:hover {
     background-color: $key-color--hover;
     transition: background-color 0.3s ease-in;
+  }
+  &:active {
+    background-color: $key-color--clicked;
+  }
+  &--wide {
+    grid-row-start: span 2;
+  }
+  &--extra-wide {
+    grid-row-start: span 3;
+  }
+  &--ultra-wide {
+    grid-row-start: span 5;
   }
 }

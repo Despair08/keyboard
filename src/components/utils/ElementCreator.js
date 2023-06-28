@@ -1,4 +1,4 @@
-export default class ElemenetCreator{
+export default class ElementCreator{
   constructor(params){
     this.element = null;
     this.createElement(params);
@@ -9,7 +9,7 @@ export default class ElemenetCreator{
   }
 
   addInnerElement(element){
-    if(element instanceof ElemenetCreator){
+    if(element instanceof ElementCreator){
       this.element.append(element.getElement());
     }else{
       this.element.append(element);

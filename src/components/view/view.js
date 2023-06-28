@@ -1,4 +1,4 @@
-import ElemenetCreator from "../utils/ElementCreator.js";
+import ElementCreator from "../utils/ElementCreator.js";
 
 export default class View{
 constructor(params = { tag: 'section', classNames: []}){
@@ -17,7 +17,7 @@ createView(params){
       callback: null
     };
 
-    this.viewElementCreator = new ElemenetCreator(elementParams);
+    this.viewElementCreator = new ElementCreator(elementParams);
     return this.viewElementCreator;
   }
 }
