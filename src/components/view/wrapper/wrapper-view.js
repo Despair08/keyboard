@@ -30,12 +30,6 @@ export default class WrapperView extends View{
       textContent: 'Virtual keyboard',
       callback: null,
     }
-    const mainParams = {
-      tag: 'div',
-      classNames: [CssClasses.MAIN],
-      textContent: '',
-      callback: null,
-    }
     const footerParams = {
       tag: 'footer',
       classNames: [CssClasses.FOOTER],

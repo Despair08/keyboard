@@ -1,7 +1,6 @@
 import './_key.scss'
 import View from "../../../../view";
 import ElementCreator from "../../../../../utils/ElementCreator";
-import { keyCodes } from '../../../../../keyCodes/keyCodes';
 
 const CssClasses = {
   KEY: 'key',
@@ -12,6 +11,8 @@ export default class KeyView extends View{
     const params = {
       tag: 'div',
       classNames: [CssClasses.KEY],
+      textContent: '',
+        callback: null,
     }
     super(params);
   }
@@ -20,7 +21,8 @@ export default class KeyView extends View{
       const keyParams = {
         tag: 'div',
         classNames: [CssClasses.KEY],
-        textContent: `a`,
+        textContent: '',
+        callback: null,
       }
       const keyCreator = new ElementCreator(keyParams);
       this.viewElementCreator.addInnerElement(keyCreator)
