@@ -5,7 +5,7 @@ import { keyCodes } from '../../../../keyCodes/keyCodes';
 import KeyView from "./keys/key-view";
 import KeyViewWide from './keys/key--wide-view';
 import KeyViewExtraWide from './keys/key--extra-wide';
-import KeyViewUltraWide from './keys/key--ultre-wide';
+import KeyViewUltraWide from './keys/key--ultra-wide';
 
 const CssClasses = {
   KEYBOARD: 'main__keyboard',
@@ -22,34 +22,34 @@ constructor(mainComponent){
   }
 
   configureView(){
-    keyCodes.forEach((key, index) => {
+    keyCodes.firstRow.forEach((key, index) => {
         switch (key) {
       case 'Backspace':
-        const creatorBackspace = new KeyViewWide(index);
+        const creatorBackspace = new KeyViewWide();
         this.viewElementCreator.addInnerElement(creatorBackspace.getHtmlElement());
         break;
       case 'Caps Lock':
-        const creatorCaps = new KeyViewWide(index);
+        const creatorCaps = new KeyViewWide();
         this.viewElementCreator.addInnerElement(creatorCaps.getHtmlElement());
         break;
       case ' ':
-        const creatorSpace = new KeyViewUltraWide(index);
+        const creatorSpace = new KeyViewUltraWide();
         this.viewElementCreator.addInnerElement(creatorSpace.getHtmlElement());
         break;
       case 'Shift':
-        const creatorShift = new KeyViewExtraWide(index);
+        const creatorShift = new KeyViewExtraWide();
         this.viewElementCreator.addInnerElement(creatorShift.getHtmlElement());
         break;
       case 'Tab':
-        const creatorTab = new KeyViewWide(index);
+        const creatorTab = new KeyViewWide();
         this.viewElementCreator.addInnerElement(creatorTab.getHtmlElement());
         break;
       case 'Enter':
-        const creatorEnter = new KeyViewWide(index);
+        const creatorEnter = new KeyViewWide();
         this.viewElementCreator.addInnerElement(creatorEnter.getHtmlElement());
         break;
       default:
-          const creatorKey = new KeyView(index);
+          const creatorKey = new KeyView();
           this.viewElementCreator.addInnerElement(creatorKey.getHtmlElement());
         break;
     }

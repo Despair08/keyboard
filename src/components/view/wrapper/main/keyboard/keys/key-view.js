@@ -8,19 +8,19 @@ const CssClasses = {
 }
 
 export default class KeyView extends View{
-  constructor(mainComponent){
+  constructor(){
     const params = {
       tag: 'div',
       classNames: [CssClasses.KEY],
     }
     super(params);
-    this.configureView(mainComponent);
   }
 
   configureView(){
       const keyParams = {
         tag: 'div',
         classNames: [CssClasses.KEY],
+        textContent: `a`,
       }
       const keyCreator = new ElementCreator(keyParams);
       this.viewElementCreator.addInnerElement(keyCreator)

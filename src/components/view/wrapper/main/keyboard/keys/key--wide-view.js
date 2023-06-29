@@ -1,5 +1,5 @@
 import './_key.scss'
-import KeyView from "./key-view";
+import View from '../../../../view';
 import ElementCreator from '../../../../../utils/ElementCreator';
 
 const CssClasses = {
@@ -7,20 +7,19 @@ const CssClasses = {
   KEY_WIDE: 'key--wide',
 }
 
-export default class KeyViewWide extends KeyView{
-  constructor(mainComponent){
+export default class KeyViewWide extends View{
+  constructor(){
     const params = {
       tag: 'div',
       classNames: [CssClasses.KEY, CssClasses.KEY_WIDE],
     }
     super(params);
-    this.configureView(mainComponent);
   }
 
   configureView(){
       const keyParams = {
         tag: 'div',
-        classNames: [CssClasses.KEY],
+        classNames: [CssClasses.KEY, CssClasses.KEY_WIDE],
       }
       const keyCreator = new ElementCreator(keyParams);
       this.viewElementCreator.addInnerElement(keyCreator)
