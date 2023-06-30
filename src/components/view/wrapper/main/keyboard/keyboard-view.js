@@ -4,7 +4,6 @@ import View from "../../../view";
 import { keyCodes } from '../../../../keyCodes/keyCodes';
 import KeyView from "./keys/key-view";
 import KeyViewWide from './keys/key--wide-view';
-import KeyViewExtraWide from './keys/key--extra-wide';
 import KeyViewUltraWide from './keys/key--ultra-wide';
 
 const CssClasses = {
@@ -16,6 +15,8 @@ constructor(mainComponent){
     const params ={
       tag: 'div',
       classNames : [CssClasses.KEYBOARD],
+      textContent: '',
+      callback: null,
     }
     super(params);
     this.configureView(mainComponent);
@@ -23,6 +24,7 @@ constructor(mainComponent){
 
   configureView(){
     keyCodes.firstRow.forEach((key, index) => {
+
         switch (key) {
       case 'Backspace':
         const creatorBackspace = new KeyViewWide();
@@ -37,7 +39,7 @@ constructor(mainComponent){
         this.viewElementCreator.addInnerElement(creatorSpace.getHtmlElement());
         break;
       case 'Shift':
-        const creatorShift = new KeyViewExtraWide();
+        const creatorShift = new KeyViewWide();
         this.viewElementCreator.addInnerElement(creatorShift.getHtmlElement());
         break;
       case 'Tab':

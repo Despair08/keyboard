@@ -2,7 +2,7 @@ import ElementCreator from "../utils/ElementCreator.js";
 
 export default class View{
 constructor(params = { tag: 'section', classNames: []}){
-this.viewElementCreator =this.createView(params)
+this.viewElementCreator = this.createView(params)
 }
 
 getHtmlElement(){
